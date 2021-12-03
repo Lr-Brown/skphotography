@@ -3,20 +3,19 @@ import styled from "styled-components"
 export const SPhoto = styled.div`
   display: flex;
   flex-direction: column;
-  width: 35%;
   align-items: center;
   justify-content: center;
+  height: 100%;
   img {
-    display: flex;
     object-fit: contain;
-    max-width: 100%;
+    max-width: 75%;
     max-height: 100%;
-    height: auto;
     width: auto;
-    border-radius: 12px;
+    height: auto;
+    border-radius: 8px;
   }
 `
-export const SQuote = styled.b`
+export const SQuote = styled.div`
   font-size: var(--body1);
   margin-top: 8px;
   margin-bottom: 4px;
@@ -28,6 +27,7 @@ export const SHeader = styled.h1`
   font-weight: bold;
   margin-bottom: 8px;
   font-style: italic;
+  text-align: center;
 `
 export const SText = styled.b`
   font-size: var(--body1);
@@ -35,22 +35,22 @@ export const SText = styled.b`
 `
 
 export const SAbout = styled.div`
-  flex-wrap: wrap;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   padding: 16px;
   align-items: center;
-  justify-content: space-evenly;
   max-height: 100%;
+  @media screen and (max-width: 1023px) {
+    grid-template-columns: 1fr;
+  }
 `
 export const SInfo = styled.div`
-  max-width: 45%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
 `
 
 export const SOther = styled.span`

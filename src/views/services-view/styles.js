@@ -12,6 +12,10 @@ export const SDescription = styled.div`
   font-weight: 600;
   font-size: var(--headline);
   flex-direction: column;
+  @media screen and (max-width: 1023px) {
+    font-size: 3vw;
+    max-width: 100%;
+  }
 `
 export const SHeading = styled.h1`
   font-size: var(--title1);
@@ -26,6 +30,9 @@ export const SServices = styled.div`
   width: 100%;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+  }
 `
 export const SCategories = styled.div`
   display: flex;
@@ -33,16 +40,24 @@ export const SCategories = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0px 16px;
+  margin-top: 16px;
   button {
     padding: 0;
+  }
+  @media screen and (max-width: 1023px) {
+    flex-direction: row;
   }
 `
 export const SCategoryItem = styled.div`
   font-size: var(--title1);
   margin: 16px;
+  font-weight: bold;
   display: flex;
   flex-direction: column;
   cursor: pointer;
+  @media screen and (max-width: 1023px) {
+    font-size: 4vw;
+  }
 `
 export const SCategoryItemUnderline = styled(motion.div)`
   width: 100%;
@@ -69,4 +84,7 @@ export const SSlideShow = styled.div`
   width: 50%;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
 `

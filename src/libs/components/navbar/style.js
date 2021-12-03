@@ -46,7 +46,7 @@ export const STab = styled(motion.div)`
   align-items: center;
   padding: 8px;
   width: 150px;
-  color: ${(props) => (props.selected ? "white" : "black")};
+  color: ${(props) => props.color};
   background-image: ${(props) => (props.selected ? `url(${photo})` : `none`)};
   background-repeat: no-repeat;
   background-position: center;
@@ -68,15 +68,23 @@ export const SContactLine = styled.div`
   display: flex;
 `
 
-export const SMobileMenu = styled.div`
+export const SMenu = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.65);
+`
+
+export const SMobileMenu = styled.button`
   display: flex;
   flex: 1;
   position: fixed;
-  top: 8px;
-  right: 8px;
-  background-color: white;
-  border-radius: 8px;
-  padding: 8px;
+  top: 3.25vh;
+  right: 16px;
+  z-index: 2;
 `
 
 export const SMobileImg = styled.img`
@@ -94,4 +102,14 @@ export const SMobile = styled.div`
   @media screen and (max-width: 1023px) {
     display: flex;
   }
+`
+export const SMobileTabSelection = styled.div`
+  width: 50vw;
+  height: 88vh;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  z-index: 2;
+  grid-template-rows: repeat(4, 1fr);
 `

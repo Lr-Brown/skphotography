@@ -45,6 +45,7 @@ body {
     -webkit-box-sizing: border-box; 
     box-sizing: border-box;
     scroll-behavior: smooth;
+    @media (min-width: 1024px){
       ::-webkit-scrollbar {
         width: 12px;
       }
@@ -55,6 +56,9 @@ body {
         background-color: var(--primaryColor);
         border-radius: 4px;        
       }
+
+    }
+      
     }
 }
 

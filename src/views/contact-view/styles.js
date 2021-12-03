@@ -30,6 +30,7 @@ export const SForm = styled.div`
     width: 100%;
     height: 250px;
     font-size: var(--body1);
+    margin: 8px;
   }
   button {
     background-color: var(--primaryColor);
@@ -52,4 +53,7 @@ export const STextInput = styled.input`
 export const SRow = styled.div`
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 1023px) {
+    flex-direction: column;
+  }
 `
